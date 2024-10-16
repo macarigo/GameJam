@@ -1,0 +1,52 @@
+package GameObjects;
+
+import GameObjects.Grid.SimpleGxGrid;
+import org.academiadecodigo.simplegraphics.graphics.Text;
+
+public class DisplayScore {
+
+    private String score;
+    private String maxscore;
+    private int currentScore = 0;
+    private int highscore = 0;
+    private final Text display = new Text(20, 20, score);
+    private final Text displayHighscore = new Text(510,500,maxscore);
+
+
+    public DisplayScore(SimpleGxGrid grid) {
+        score = "Score: 0";
+        currentScore = 0;
+    }
+    public int getCurrentScore(){
+        return currentScore;
+    }
+
+    public void draw(){
+        displayHighscore.delete();
+        display.setText(score);
+        display.draw();
+    }
+
+    public void setScore() {
+        currentScore++;
+        score = "Score: " + currentScore;
+        display.setText(score);
+    }
+
+    public void displayHighscore(){
+        maxscore = "Highscore: " + highscore;
+        displayHighscore.setText(maxscore);
+        displayHighscore.draw();
+    }
+
+    public void resetScore(){
+        if(currentScore > highscore){
+            highscore = currentScore;
+        }
+        currentScore = 0;
+        score = "Score: " + currentScore;
+        display.delete();
+    }
+
+
+}
