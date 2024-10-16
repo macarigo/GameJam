@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<project name="JarResources" default="jarfile">
+
+    <!-- Initialize build properties  -->
+    <target name="init" description="Initializes properties">
+      <!-- change the value below into your game name-->
+        <property name="project.name" value="BetaTeam1.0" />
+        <property name="src.dir" value="src" />
+      <!-- dont forget to add your entry point classpath here -->
+        <property name="main.class" value="Main" />
+        <property name="build.dir" value="build" />
+        <property name="classes.dir" value="${build.dir}/classes" />
+        <property name="lib.dir" value="lib" />
+        <property name="resource.dir" value="resources"/>
+        <path id="classpath">
+            <fileset dir="src/lib" includes="**/*.jar" />
+        </path>
+    </target>
+
+    <!-- Creates the build directories to hold JAR and Class files -->
+    <target name="prepare" description="Creates the build and classes directories" depends="init">
+        <mkdir dir="${classes.dir}" />
+    </target>
+
+    <!-- Removes the build directory -->
+    <target name="clean" description="Clean up project" depends="init">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- Compiles the source code -->
+    <target name="compile" description="Compiles the source code" depends="prepare">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <!-- Creates a JAR file -->
+    <target name="jarfile" description="Archives the code" depends="compile">
+        <jar destfile="${build.dir}/${project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}" />
+                <attribute name="Class-Path" value="${lib.dir} ${resource.dir}" />
+            </manifest>
+            <zipgroupfileset dir="src/lib" includes="*.jar"/>
+            <fileset dir=".">
+                <include name="**/${resource.dir}/**"/>
+            </fileset>
+        </jar>
+    </target>
+
+</project>
