@@ -25,8 +25,8 @@ public class Tubes extends AbstractUnitPosition{
     private final double width;
     private final double gap = 150;
     private boolean isMoving;
-    private final int[] heights = new int[]{370, 323, 262, 213, 175, 130, 103};
-    private final String[] pictures = new String[]{"resources/pipes_down.png", "resources/pipes_up.png", "resources/pipes_down.png", "resources/pipes_down.png", "resources/pipes_up.png", "resources/pipes_up.png"};
+    private final int[] heights = new int[]{430, 270, 150, 50};
+    private final String[] pictures = new String[]{"resources/tube_low.png", "resources/tube_mid.png", "resources/tube_high.png", "resources/tube_vhigh.png"};
 
     public Tubes(double col, double row, double height, SimpleGxGrid grid) {
         super(col, row, grid);
@@ -41,7 +41,7 @@ public class Tubes extends AbstractUnitPosition{
         startY2 = height + gap;
         rectangleTop = new Rectangle(x, y, width, this.height);
         rectangleBot = new Rectangle(x, y2, width, grid.getHeight() - y2);
-        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/pipes_up.png");
+        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/tube_high.png");
     }
     public Tubes(double col, double row, SimpleGxGrid grid) {
         super(col, row, grid);
@@ -52,7 +52,7 @@ public class Tubes extends AbstractUnitPosition{
         y2 = height + gap;
         rectangleTop = new Rectangle(x, y, width, this.height);
         rectangleBot = new Rectangle(x, y2, width, grid.getHeight() - y2);
-        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/pipes_up.png");
+        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/tube_high.png");
         changeHeight();
     }
 
