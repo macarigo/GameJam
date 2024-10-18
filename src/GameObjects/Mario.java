@@ -5,7 +5,7 @@ import GameObjects.Grid.SimpleGxGrid;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
-public class Floppy extends AbstractUnitPosition implements Runnable {
+public class Mario extends AbstractUnitPosition implements Runnable {
 
     private double speed = 3; //Not decided yet
     private final Rectangle rectangle;
@@ -15,27 +15,27 @@ public class Floppy extends AbstractUnitPosition implements Runnable {
     private double x;
     private double y;
     private final double terminalVelocity;
-    private final int floppyWidth;
-    private final int floppyHeight;
+    private final int marioWidth;
+    private final int marioHeight;
 
-    public Floppy(double col, double row, SimpleGxGrid grid) {
+    public Mario(double col, double row, SimpleGxGrid grid) {
         super(col, row, grid);
-        floppyWidth = 30;
-        floppyHeight = 42;
+        marioWidth = 15;
+        marioHeight = 30;
         simpleGxGrid = grid;
         terminalVelocity = 3; // gravidade
         double x = grid.columnToX(col);
         double y = grid.rowToY(row);
-        rectangle = new Rectangle(x, y, floppyWidth, floppyHeight);
+        rectangle = new Rectangle(x, y, marioWidth, marioHeight);
         picture = new Picture(x - 30, y - 15, "resources/mario.png");
     }
 
-    public int getFloppyWidth() {
-        return floppyWidth;
+    public int getMarioWidth() {
+        return marioWidth;
     }
 
-    public int getFloppyHeight() {
-        return floppyHeight;
+    public int getMarioHeight() {
+        return marioHeight;
     }
 
     public double getColumn() {
@@ -133,6 +133,3 @@ public class Floppy extends AbstractUnitPosition implements Runnable {
 
     }
 }
-
-
-
