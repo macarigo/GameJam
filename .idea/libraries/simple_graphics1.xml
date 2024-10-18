@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="simple-graphics1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/production/floppy-bird-master/lib/simple-graphics.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
