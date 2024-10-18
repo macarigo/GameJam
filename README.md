@@ -1,2 +1,2 @@
-# BetaTeamGame
+# MarioBird project for GameJam
 
