@@ -1,4 +1,4 @@
-import GameObjects.Floppy;
+import GameObjects.Mario;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -6,7 +6,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class Controller implements KeyboardHandler {
 
-    private Floppy floppy;
+    private Mario mario;
     private GameEngine gameEngine;
 
     public void init() {
@@ -39,7 +39,7 @@ public class Controller implements KeyboardHandler {
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
         if (keyboardEvent.getKey() == KeyboardEvent.KEY_SPACE) {
-            floppy.setMoving(false);
+            mario.setMoving(false);
         }
 
         if (keyboardEvent.getKey() == KeyboardEvent.KEY_R) {
@@ -55,12 +55,12 @@ public class Controller implements KeyboardHandler {
     @Override
     public void keyPressed(KeyboardEvent keyboardEvent) {
         if (keyboardEvent.getKey() == KeyboardEvent.KEY_SPACE) {
-            floppy.setMoving(true);
+            mario.setMoving(true);
         }
     }
 
-    public void setCharacter(Floppy floppy) {
-        this.floppy = floppy;
+    public void setCharacter(Mario mario) {
+        this.mario = mario;
     }
 
     public void setGameEngine(GameEngine gameEngine) {

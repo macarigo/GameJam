@@ -1,6 +1,7 @@
 package GameObjects;
 
 import GameObjects.Grid.SimpleGxGrid;
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Text;
 
 public class DisplayScore {
@@ -9,7 +10,7 @@ public class DisplayScore {
     private String maxscore;
     private int currentScore = 0;
     private int highscore = 0;
-    private final Text display = new Text(20, 20, score);
+    private final Text display = new Text(30, 30, score);
     private final Text displayHighscore = new Text(510,500,maxscore);
 
 
@@ -24,7 +25,10 @@ public class DisplayScore {
     public void draw(){
         displayHighscore.delete();
         display.setText(score);
+        display.setColor(Color.WHITE);
+        display.grow(10,5);
         display.draw();
+
     }
 
     public void setScore() {

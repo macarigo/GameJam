@@ -1,6 +1,6 @@
 package GameObjects.Grid;
 
-import GameObjects.Floppy;
+import GameObjects.Mario;
 import GameObjects.Grid.Position.GridPosition;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
@@ -98,12 +98,12 @@ public class SimpleGxGrid implements Grid {
      * FLOPPYPAD is used here to compensate for the differences between the position of the picture Floppy with its rectangle representation
      *
      */
-    public boolean isOutOfBoundsTop(Floppy floppy){
+    public boolean isOutOfBoundsTop(Mario mario){
 
-        return  floppy.getY() - 5 <= PADDING || floppy.getX() <= PADDING;
+        return  mario.getY() - 5 <= PADDING || mario.getX() <= PADDING;
     }
-    public boolean isOutOfBoundsBot(Floppy floppy){
-        return floppy.getY()+ FLOPPYPAD  >= getHeight() || floppy.getX() >= getWidth();
+    public boolean isOutOfBoundsBot(Mario mario){
+        return mario.getY()+ FLOPPYPAD  >= getHeight() || mario.getX() >= getWidth();
     }
 
 }
