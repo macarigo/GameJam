@@ -23,7 +23,7 @@ public class Mario extends AbstractUnitPosition implements Runnable {
         marioWidth = 15;
         marioHeight = 30;
         simpleGxGrid = grid;
-        terminalVelocity = 3; // gravidade
+        terminalVelocity = 4; // gravidade
         double x = grid.columnToX(col);
         double y = grid.rowToY(row);
         rectangle = new Rectangle(x, y, marioWidth, marioHeight);
@@ -118,7 +118,7 @@ public class Mario extends AbstractUnitPosition implements Runnable {
             }
         }
         if (moving) {
-            speed = 3; // altura do salto
+            speed = 2; // altura do salto
             double temp = 0;
             double dy = 5; // salto
             if (!simpleGxGrid.isOutOfBoundsTop(this)) {

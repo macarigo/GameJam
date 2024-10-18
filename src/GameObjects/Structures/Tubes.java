@@ -14,7 +14,7 @@ public class Tubes extends AbstractUnitPosition{
     private final Rectangle rectangleTop;
     private final Rectangle rectangleBot;
     private final SimpleGxGrid simpleGxGrid;
-    private double speed = -4d;
+    private double speed = -3d;
     private final double acceleration = 0.2;
     private final Picture picture;
     private final double initialX = 1000;
@@ -49,7 +49,7 @@ public class Tubes extends AbstractUnitPosition{
         width = 50;
         x = grid.columnToX(col);
         y = grid.rowToY(row);
-        y2 = height -40 + gap;
+        y2 = height + gap;
         rectangleTop = new Rectangle(x, y, width, this.height-10);
         rectangleBot = new Rectangle(x, y2, width, grid.getHeight() - y2);
         picture = new Picture(rectangleTop.getX()-6, rectangleTop.getY(), "resources/tube_high.png");
