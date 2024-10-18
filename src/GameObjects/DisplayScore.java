@@ -15,7 +15,7 @@ public class DisplayScore {
 
 
     public DisplayScore(SimpleGxGrid grid) {
-        score = "Score: 0";
+        score = "Score: " + currentScore;
         currentScore = 0;
     }
     public int getCurrentScore(){
@@ -51,6 +51,4 @@ public class DisplayScore {
         score = "Score: " + currentScore;
         display.delete();
     }
-
-
 }

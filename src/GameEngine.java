@@ -28,13 +28,13 @@ public class GameEngine{
         this.gameRunning = gameRunning;
     }
 
-    public void setController(Controller controller) {
+/*    public void setController(Controller controller) {
         this.controller = controller;
     }
 
     public void setBackground(Background background) {
         this.background = background;
-    }
+    }*/
 
     public void init() {
         grid = new SimpleGxGrid(73, 45);
@@ -91,9 +91,9 @@ public class GameEngine{
         }
     }
 
-    public boolean isGameRunning() {
+/*    public boolean isGameRunning() {
         return gameRunning;
-    }
+    }*/
 
     public void run() {
         long timestamp;
@@ -110,11 +110,11 @@ public class GameEngine{
             }
             collisionDetector.incrementScore();
 
-            if (displayScore.getCurrentScore() % 5 == 0 && displayScore.getCurrentScore() != 0) {
+/*            if (displayScore.getCurrentScore() % 5 == 0 && displayScore.getCurrentScore() != 0) {
                 for (Tubes tube : tubeArray) {
                     tube.setSpeed();
                 }
-            }
+            }*/
             if (grid.isOutOfBoundsBot(mario) || grid.isOutOfBoundsTop(mario) || collisionDetector.isCrashed()) {
                 background.gameOver();
                 gameOver();
@@ -148,8 +148,8 @@ public class GameEngine{
         }
     }
 
-    public Tubes randomTube() {
+/*    public Tubes randomTube() {
         int selectedTube = (int) (Math.floor(Math.random() * tubeArray.length));
         return tubeArray[selectedTube];
-    }
+    }*/
 }
