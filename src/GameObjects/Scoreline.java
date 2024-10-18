@@ -15,6 +15,8 @@ public class Scoreline {
     private boolean reset;
     private boolean canScore;
 
+    private static boolean scored;
+
 
     public Scoreline(SimpleGxGrid grid, Tubes tube) {
         this.tube = tube;
@@ -49,6 +51,7 @@ public class Scoreline {
     public void setPosition() {
         this.line.translate(tube.getInitialX(), 0);
         x = tube.getInitialX();
+        canScore = true;
     }
 
     public void setCanScore(boolean canScore) {
@@ -64,13 +67,19 @@ public class Scoreline {
     }
 
     public boolean canScore() {
-        return canScore;
+        return !scored;
     }
 
+    public static void resetScoreline(){
+        scored = false;
+    }
 
     public double getX() {
         return x;
     }
 
-
+    public void setScored(){
+        canScore = false;
+        scored = true;
+    }
 }

@@ -2,6 +2,7 @@ package GameObjects.Structures;
 
 import GameObjects.Grid.Position.AbstractUnitPosition;
 import GameObjects.Grid.SimpleGxGrid;
+import GameObjects.Scoreline;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
@@ -125,6 +126,7 @@ public class Tubes extends AbstractUnitPosition{
             this.rectangleBot.translate(initialX, 0);
             this.picture.translate(initialX, 0);
             changeHeight();
+            Scoreline.resetScoreline();
         }
     }
 
@@ -137,5 +139,4 @@ public class Tubes extends AbstractUnitPosition{
         rectangleBot.setHeight(simpleGxGrid.getHeight() - y2);
         picture.load(pictures[random]);
     }
-
 }

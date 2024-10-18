@@ -36,8 +36,15 @@ public class CollisionDetector {
         return false;
     }
 
-
     public void incrementScore() {
+        for (Scoreline line : scoreline) {
+            if (mario.getX() >= line.getX() && line.canScore()) {
+                score.setScore();
+                line.setScored();
+            }
+        }
+    }
+/*    public void incrementScore() {
         for (Scoreline line : scoreline) {
             if (mario.getX() >= line.getX() && line.canScore()) {
                 score.setScore();
@@ -47,5 +54,5 @@ public class CollisionDetector {
                 line.setReset(false);
             }
         }
-    }
+    }*/
 }

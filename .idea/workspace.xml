@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0422576f-63ec-4cd7-8fc2-9c5c2e1860bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/simple_graphics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/simple_graphics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/simple_graphics1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/simple_graphics1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/simple_graphics2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/simple_graphics2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/simple_graphics_0_2_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameJam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GameJam.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/CollisionDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/CollisionDetector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/GameEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameObjects/DisplayScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/GameObjects/DisplayScore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Floppy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Grid/SimpleGxGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Grid/SimpleGxGrid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Scoreline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Scoreline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Structures/Tubes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/GameObjects/Structures/Tubes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameJam/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameJam/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CollisionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CollisionDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObjects/DisplayScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObjects/DisplayScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObjects/Scoreline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObjects/Scoreline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObjects/Structures/Tubes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObjects/Structures/Tubes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2nc4XGMahUvepa1DFaC9r5TLGAD" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0422576f-63ec-4cd7-8fc2-9c5c2e1860bf" name="Changes" comment="" />
+      <created>1729259067715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729259067715</updated>
+      <workItem from="1729259068811" duration="2488000" />
+      <workItem from="1729262036695" duration="354000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
