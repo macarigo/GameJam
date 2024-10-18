@@ -1,18 +1,18 @@
 import GameObjects.DisplayScore;
-import GameObjects.Floppy;
+import GameObjects.Mario;
 import GameObjects.Scoreline;
 import GameObjects.Structures.Tubes;
 
 public class CollisionDetector {
 
-    private final Floppy floppy;
+    private final Mario mario;
     private final Tubes[] tubs;
     private final Scoreline[] scoreline;
     private final DisplayScore score;
 
 
-    public CollisionDetector(Floppy floppy, Tubes[] tubs, Scoreline[] scoreline, DisplayScore score) {
-        this.floppy = floppy;
+    public CollisionDetector(Mario mario, Tubes[] tubs, Scoreline[] scoreline, DisplayScore score) {
+        this.mario = mario;
         this.tubs = tubs;
         this.scoreline = scoreline;
         this.score = score;
@@ -23,13 +23,13 @@ public class CollisionDetector {
     public boolean isCrashed() {
         for (Tubes tube : tubs) {
 
-            if ((floppy.getX() + floppy.getFloppyWidth() >= tube.getXBot() &&
-                    floppy.getX() <= tube.getXBot() + tube.getWidth() &&
-                    floppy.getY() + floppy.getFloppyHeight() >= tube.getYBot())) {
+            if ((mario.getX() + mario.getMarioWidth() >= tube.getXBot() &&
+                    mario.getX() <= tube.getXBot() + tube.getWidth() &&
+                    mario.getY() + mario.getMarioHeight() >= tube.getYBot())) {
                 return true;
-            } else if (floppy.getX() + floppy.getFloppyWidth() >= tube.getXTop() &&
-                    floppy.getX() <= tube.getXTop() + tube.getWidth() &&
-                    floppy.getY() <= tube.getYTop() + tube.getHeightTop()) {
+            } else if (mario.getX() + mario.getMarioWidth() >= tube.getXTop() &&
+                    mario.getX() <= tube.getXTop() + tube.getWidth() &&
+                    mario.getY() <= tube.getYTop() + tube.getHeightTop()) {
                 return true;
             }
         }
@@ -39,7 +39,7 @@ public class CollisionDetector {
 
     public void incrementScore() {
         for (Scoreline line : scoreline) {
-            if (floppy.getX() >= line.getX() && line.canScore()) {
+            if (mario.getX() >= line.getX() && line.canScore()) {
                 score.setScore();
                 line.setCanScore(false);
             } else if (line.isReset()) {

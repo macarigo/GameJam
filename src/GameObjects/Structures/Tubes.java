@@ -15,7 +15,7 @@ public class Tubes extends AbstractUnitPosition{
     private final Rectangle rectangleBot;
     private final SimpleGxGrid simpleGxGrid;
     private double speed = -3d;
-    private final double acceleration = 0.1;
+    private final double acceleration = 0.2;
     private final Picture picture;
     private final double initialX = 1000;
     private double startX;
@@ -25,10 +25,10 @@ public class Tubes extends AbstractUnitPosition{
     private final double width;
     private final double gap = 150;
     private boolean isMoving;
-    private final int[] heights = new int[]{370, 323, 262, 213, 175, 130, 103};
-    private final String[] pictures = new String[]{"resources/pipes_down.png", "resources/pipes_up.png", "resources/pipes_down.png", "resources/pipes_down.png", "resources/pipes_up.png", "resources/pipes_up.png"};
+    private final int[] heights = new int[]{430, 270, 150, 50};
+    private final String[] pictures = new String[]{"resources/tube_low.png", "resources/tube_mid.png", "resources/tube_high.png", "resources/tube_vhigh.png"};
 
-    public Tubes(double col, double row, double height, SimpleGxGrid grid) {
+    public Tubes(double col, double row, double height, SimpleGxGrid grid) { //graphical constructor
         super(col, row, grid);
         simpleGxGrid = grid;
         width = 50;
@@ -37,22 +37,22 @@ public class Tubes extends AbstractUnitPosition{
         startX = grid.columnToX(col);
         y = grid.rowToY(row);
         startY = grid.rowToY(row);
-        y2 = height + gap;
+        y2 = height - 40 + gap;
         startY2 = height + gap;
-        rectangleTop = new Rectangle(x, y, width, this.height);
+        rectangleTop = new Rectangle(x, y, width, this.height-20);
         rectangleBot = new Rectangle(x, y2, width, grid.getHeight() - y2);
-        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/pipes_up.png");
+        picture = new Picture(rectangleTop.getX()-6, rectangleTop.getY(), "resources/tube_high.png");
     }
-    public Tubes(double col, double row, SimpleGxGrid grid) {
+    public Tubes(double col, double row, SimpleGxGrid grid) { // logical constructor, used for collider
         super(col, row, grid);
         simpleGxGrid = grid;
         width = 50;
         x = grid.columnToX(col);
         y = grid.rowToY(row);
         y2 = height + gap;
-        rectangleTop = new Rectangle(x, y, width, this.height);
+        rectangleTop = new Rectangle(x, y, width, this.height-10);
         rectangleBot = new Rectangle(x, y2, width, grid.getHeight() - y2);
-        picture = new Picture(rectangleTop.getX(), rectangleTop.getY(), "resources/pipes_up.png");
+        picture = new Picture(rectangleTop.getX()-6, rectangleTop.getY(), "resources/tube_high.png");
         changeHeight();
     }
 

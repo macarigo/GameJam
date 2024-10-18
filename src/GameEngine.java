@@ -1,5 +1,5 @@
 import GameObjects.DisplayScore;
-import GameObjects.Floppy;
+import GameObjects.Mario;
 import GameObjects.Grid.SimpleGxGrid;
 import GameObjects.Menu.Background;
 import GameObjects.Scoreline;
@@ -10,7 +10,7 @@ public class GameEngine{
 
     private SimpleGxGrid grid;
     private Background background;
-    private Floppy floppy;
+    private Mario mario;
     private Scoreline scoreline1, scoreline2, scoreline3;
     private Scoreline[] scorelineArray;
     private DisplayScore displayScore;
@@ -39,7 +39,7 @@ public class GameEngine{
     public void init() {
         grid = new SimpleGxGrid(73, 45);
         background = new Background();
-        floppy = new Floppy(10, 10, grid);
+        mario = new Mario(10, 10, grid);
 
         //lots of tubes
         tubes1 = new Tubes(70, 0, grid);
@@ -53,17 +53,16 @@ public class GameEngine{
         scoreline3 = new Scoreline(grid, tubes3);
         scorelineArray = new Scoreline[]{scoreline1, scoreline2, scoreline3};
 
-        collisionDetector = new CollisionDetector(floppy, tubeArray, scorelineArray, displayScore);
+        collisionDetector = new CollisionDetector(mario, tubeArray, scorelineArray, displayScore);
         controller = new Controller();
         controller.setGameEngine(this);
         gameOver = new Picture(5, 5, "resources/game_over_v2.png");
         grid.init();
         background.renderMainMenu();
-        controller.setCharacter(floppy);
+        controller.setCharacter(mario);
         controller.init();
         gameState();
     }
-    boolean fuck = false;
     public void gameState(){
 
         while(true){
@@ -75,7 +74,7 @@ public class GameEngine{
                 background.hideMainMenu();
                 background.renderGameRunning();
 
-                floppy.render();
+                mario.render();
                 displayScore.draw();
                 for (Tubes tube: tubeArray) {
 
@@ -102,7 +101,7 @@ public class GameEngine{
         while (true) {
             oldTimestamp = System.currentTimeMillis();
             timestamp = System.currentTimeMillis();
-            floppy.run();
+            mario.run();
             for (Tubes tube : tubeArray) {
                 tube.moveLeft();
             }
@@ -116,7 +115,7 @@ public class GameEngine{
                     tube.setSpeed();
                 }
             }
-            if (grid.isOutOfBoundsBot(floppy) || grid.isOutOfBoundsTop(floppy) || collisionDetector.isCrashed()) {
+            if (grid.isOutOfBoundsBot(mario) || grid.isOutOfBoundsTop(mario) || collisionDetector.isCrashed()) {
                 background.gameOver();
                 gameOver();
                 gameRunning = false;
@@ -143,7 +142,7 @@ public class GameEngine{
         for (Tubes tube : tubeArray) {
             tube.hide();
         }
-        floppy.hide();
+        mario.hide();
         for (Scoreline line : scorelineArray) {
             line.hide();
         }
